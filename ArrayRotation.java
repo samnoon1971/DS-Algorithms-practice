@@ -19,16 +19,17 @@ public class ArrayRotation {
     }
     void printArray(int arr[], int n) {
         for(int i=0; i<n; i++) {
-            System.out.println(arr[i] + ' ');
+            System.out.print(arr[i] + " ");
         }
+        System.out.println();
     }
     public static void main(String[] args) {
         ArrayRotation rotate = new ArrayRotation();
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter n: ");
         int n = scan.nextInt();
-        System.out.println("Enter " + n + " elements: ");
         int[] arr = new int[n];
+        System.out.println("Enter " + n + " elements: ");
         for(int i=0; i<n; i++) {
             arr[i] = scan.nextInt();
         }
