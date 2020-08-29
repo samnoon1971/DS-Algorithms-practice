@@ -9,8 +9,8 @@ public class LongestCommonSubsequence {
         if(dp[m - 1][n - 1] != -1)
             return dp[m - 1][n - 1];
         if(x[m-1] == y[n-1])
-            return 1 + lcs(x, y, m - 1, n - 1, dp);
-        return max(lcs(x, y, m - 1, n, dp), lcs(x, y, m, n - 1, dp));
+            return dp[m - 1][n - 1] = 1 + lcs(x, y, m - 1, n - 1, dp);
+        return dp[m - 1][n - 1] = max(lcs(x, y, m - 1, n, dp), lcs(x, y, m, n - 1, dp));
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
